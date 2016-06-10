@@ -1,0 +1,149 @@
+/* Bootstrap Overrides */
+
+input, button{
+	box-shadow: none !important;
+}
+.btn{
+	padding: 6px 24px 5px;
+	&.btn-default{
+		background-color: $white;
+		border-color: lighten($theme-primary-color, 50%);
+		color: $theme-primary-color;
+		&:hover, &:focus{
+			background-color: $gray-lighter;
+			border-color: lighten($theme-primary-color, 60%);
+			color: $theme-primary-color;
+		}
+	}
+	&.btn-primary{
+		background-color: $theme-primary-color;
+		border-color: $theme-primary-color;
+		color: $white;
+		&:hover, &:focus{
+			background-color: lighten($theme-primary-color, 10%);
+			border-color: lighten($theme-primary-color, 10%);
+		}
+	}
+}
+.form-control{
+	height: 32px;
+	&:focus{
+		border-color: $theme-highlights-color;
+	}
+}
+
+.navbar-nav{
+	margin: 8px -15px;
+	&.navbar-right{
+		margin: -8px -15px 8px;
+	}
+}
+.navbar-toggle{
+	border: none;
+	display: inline-block;
+	height: 32px;
+	padding: 0;
+	position: relative;
+	width: 32px;
+	&:before{
+		content: '\f0c9';
+		display: block;
+		font-family: $font-family-icons;
+		height: 32px;
+		left: 0;
+		line-height: 32px;
+		position: absolute;
+		text-align: right;
+		text-indent: -1px;
+		top: 0;
+		width: 32px;
+	}
+}
+.dropdown-menu{
+	background: $gray-lighter;
+	border: 0;
+	box-shadow: none;
+	padding: 8px 0 16px;
+	transition: all 250ms ease-in-out;
+	& > li{
+		& > a{
+			color: $gray-light;
+			font-weight: 300;
+			padding: 8px 16px 9px;
+			&:hover, &:focus{
+				background: none;
+				color: $theme-secondary-color;
+			}
+		}
+	}
+	.divider {
+		background: $gray-lighter;
+		margin: 8px 0;
+		opacity: 0.2;
+	}	
+}
+.modal-backdrop{
+	background: $white;
+	&.in{
+		opacity: .97;
+	}
+}
+.checkbox{
+	position: relative;
+	input{
+		visibility: hidden;
+		&:before{
+			background: $white;
+			border: 1px solid $gray-lines;
+			border-radius: 3px;
+			content: '';
+			display: block;
+			font-family: $font-family-icons;
+			font-size: 0.875em;
+			height: 16px;
+			left: 0;
+			line-height: 14px;
+			position: absolute;
+			text-align: center;
+			top: 1px;
+			visibility: visible;
+			width: 16px;
+		}		
+		&:checked{
+			&:before{
+				content: '\f00c';
+				color: $success;
+			}
+		}
+	}
+}
+.alert{
+	font-size: 0.875em;
+	font-weight: 300;
+	padding: 16px;
+	&.alert-warning{
+		background: rgba($alert, 0.2);
+		color: $gray;
+	}
+}
+
+@media (min-width: $screen-sm-min){
+	.navbar-nav{
+		margin: 0;
+		&.navbar-right{
+			margin: 0;
+		}
+		& > li{
+			& > a {
+				padding-top: 14px;
+				padding-bottom: 14px;
+			}
+		}
+	}
+	.navbar-toggle{
+		display: none;
+	}
+	.dropdown-menu{
+		padding: 8px 0;
+	}
+}

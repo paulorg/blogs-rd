@@ -1,0 +1,87 @@
+/* Global Nav */
+
+.global-nav{
+	&.navbar-default{
+		background: $white;
+		border: 0;
+		.navbar-nav > li{
+			& > a{
+				color: $gray-light;
+				font-size: 0.75em;
+				font-weight: 400;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+			&.open, &.open:hover, &.open:focus{
+				& > a{
+					background: $white;
+					color: $gray;
+					&:after{
+						content: '\f0d7';
+					}
+				}
+			}
+			&.dropdown{
+				& > a:after{
+					content: '\f0da';
+					font-family: $font-family-icons;
+					margin: 0;
+				}
+			}
+		}
+		.navbar-brand{
+			background: url('img/resultados_digitais.svg') no-repeat center center;
+			height: 48px;
+			line-height: 48px;
+			padding: 0;
+			margin: 0 0 0 15px;
+			text-indent: -5000px;
+			width: 145px;
+		}
+		.navbar-toggle{
+			color: $gray-light;
+			&:hover, &:focus{
+				background: none;
+				color: $gray-light;
+			}
+		}
+	}
+	&.navbar{
+		border-radius: 0;
+		margin: 0;
+		min-height: 48px;
+		.navbar-right{
+			margin: 8px -15px;
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min){
+	.global-nav{
+		&.navbar-default{
+			.navbar-brand{
+				margin: 0;
+			}
+			.navbar-right{
+				margin: 0;
+			}
+			.navbar-nav > li{
+				&.open, &.open:hover, &.open:focus{
+					& > a{
+						background: $gray-lighter;
+					}
+				}
+				&:last-child{
+					a{
+						padding-right: 0;
+					}
+				}
+				&.dropdown{
+					& > a:after{
+						content: '\f0d7';
+					}
+				}
+			}
+		}
+	}
+}

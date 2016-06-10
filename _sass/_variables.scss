@@ -1,0 +1,23 @@
+// Colors variables
+
+$danger: rgba(215,105,100,1);
+$alert: rgba(245,175,80,1);
+$success: rgba(155,195,180,1);
+$gray-lighter: rgba(240,240,250,1);
+$gray-light: rgba(120,120,120,1);
+$gray-dark: rgba(50,50,50,1);
+$gray-lines: rgba(205,205,205,1);
+$white: rgba(255,255,255,1);
+
+//Typography variables
+
+$font-family-sans-serif:     "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          "Merriweather", Georgia, "Times New Roman", Times, serif !default;
+$font-family-base:           $font-family-sans-serif !default;
+$font-family-icons:			 "FontAwesome";
+
+//Theme colors variables
+
+$theme-primary-color: rgba(55,75,100,1);
+$theme-secondary-color: rgba(75,95,125,1);
+$theme-highlights-color: rgba(150,180,215,1);

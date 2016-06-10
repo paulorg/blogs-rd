@@ -1,0 +1,149 @@
+/* Main Nav */
+
+.main-nav{
+	&.navbar-default{
+		background: $theme-secondary-color;
+		border: 0;
+		.navbar-nav{
+			margin: 0 -15px;
+			& > li{
+				& > a{
+					color: $white;
+					font-weight: 300;
+				}
+				&.open, &.open:hover, &.open:focus{
+					& > a{
+						background: darken($theme-secondary-color, 5%);
+						color: $white;
+					}
+				}
+				&.dropdown{
+					& > a{
+						&:after{
+							content: '\f0da';
+							font-family: $font-family-icons;
+							font-size: 0.75em;
+							margin: 0 0 0 4px;
+						}
+					}
+					&.open{
+						& > a{
+							&:after{
+								content: '\f0d7';
+							}
+						}
+					}
+					.dropdown-menu{
+						background: darken($theme-secondary-color, 5%);
+						& > li{
+							& > a{
+								color: $white;
+							}
+							&.active{
+								& > a{
+									background: none;
+									font-weight: 700;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.navbar-toggle{
+		color: $white;
+		float: left;
+		margin-left: 15px;
+		&:before{
+			text-align: left;
+		}
+		&:after{
+			content: 'Menu';
+			font-size: 0.75em;
+			letter-spacing: 0.5px;
+			margin: -8px 0 0 10px;
+			position: absolute;
+			text-transform: uppercase;
+		}
+		&:hover, &:focus{
+			background: none;
+			color: $white;
+		}
+	}
+	&.navbar{
+		border-radius: 0;
+		margin: 0;
+		min-height: 48px;
+		.navbar-collapse{
+			border: none;
+			padding-bottom: 8px;
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min){
+	.main-nav{
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		&.navbar-default{
+			.navbar-nav{
+				margin: 0;
+				& > li{
+					& > a{
+						padding-top: 13px;
+						padding-bottom: 13px;
+					}
+					&.dropdown{
+						& > a{
+							&:after{
+								content: '\f0d7';
+							}
+						}
+					}
+				}
+			}
+			&.navbar{
+				.navbar-collapse{
+					margin: 0 -30px;
+					padding-bottom: 0;
+				}
+			}
+		}
+		.navbar-right{
+			& > li{
+				& > a{
+					padding-top: 14px;
+					padding-bottom: 14px;
+					position: relative;
+					text-indent: -5000px;
+					width: 48px;
+					&:after{
+						content: '\f002';
+						color: $white;
+						font-family: $font-family-icons;
+						height: 48px;
+						line-height: 48px;
+						position: absolute;
+						right: 0;
+						text-align: center;
+						text-indent: 0;
+						top: 0;
+						width: 48px;
+					}
+				}
+			}
+		}
+		.dropdown-menu{
+			& > li{
+				& > a{
+					&:hover, &:focus{
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

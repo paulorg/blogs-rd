@@ -1,0 +1,140 @@
+/* Related posts */
+
+.zem_rp_content{
+	h3{
+		font-size: 1.125em;
+		font-weight: 700;
+		letter-spacing: -1px;
+		line-height: 1.333333;
+		margin: 0 0 26px 0;
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+		li{
+			display: table;
+			& + li{
+				margin-top: 16px;
+			}
+			a{
+				color: $gray-dark;
+				display: table-cell;
+				font-size: 0.875em;
+				font-weight: 300;
+				letter-spacing: -0.5px;
+				line-height: 1.5;
+				vertical-align: middle;
+				&.zem_rp_title{
+					padding: 0 0 0 15px;
+				}
+				&:visited, &:hover, &:focus{
+					color: $gray-dark;
+				}
+				&:hover, &:focus{
+					color: $theme-primary-color !important;
+					& + a{
+						color: $theme-primary-color !important;
+					}
+				}
+				img{
+					border-radius: 3px;
+				}
+			}
+		}
+	}
+	.zem_rp_footer{
+		margin-top: 16px;
+		text-align: left !important;
+		a{
+			font-size: 0.8125em;
+		}
+	}
+}
+@media (min-width: $screen-md){
+	.zem_rp_content{
+		ul{
+			li{
+				a{
+					vertical-align: top;
+					&.zem_rp_title{
+						height: 64px;
+						display: -webkit-box;
+						-webkit-line-clamp: 3;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* PageNavi */
+
+.wp-pagenavi{
+	border-top: 1px solid lighten($gray-lines, 10%);
+	clear: both;
+	font-size: 0.8125em;
+	margin: 16px 0 0 0;
+	padding: 32px 0 0 0;
+	text-align: center;
+	a{
+		border-radius: 3px;
+		background: $gray-lighter;
+		font-weight: 400;
+		padding: 8px 8px 7px;
+		&:hover{
+			text-decoration: none;
+		}
+		& + a, & + span{
+			margin-left: 6px;
+		}
+	}
+	span{
+		color: $gray;
+		& + span, & + a{
+			margin-left: 6px;
+		}
+	}
+	.current{
+		background: $gray-lighter;
+		font-weight: 900;
+		padding: 8px 8px 7px;
+	}
+	.extend{
+		display: none;
+		padding: 8px 4px 7px;
+	}
+	.pages, .page, .last, .current{
+		display: none;
+	}
+	.nextpostslink, .previouspostslink{
+		padding: 8px 16px 7px;
+	}
+	.nextpostslink:before{
+		content: 'Próximo ';
+	}
+	.previouspostslink:after{
+		content: ' Anterior';
+	}
+}
+@media (min-width: $screen-md){
+	.wp-pagenavi{
+		.pages, .page, .extend, .last, .current{
+			display: inline;
+		}
+		.pages{
+			margin: 0 8px 0 0;
+		}
+		.nextpostslink, .previouspostslink{
+			padding: 8px 8px 7px;
+			&:before, &:after{
+				content: '';
+			}
+		}
+	}
+}
+.astronaut{
+	opacity: .5;
+}
