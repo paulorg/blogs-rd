@@ -6,7 +6,7 @@
 			& + h2, & + hr{
 				margin-top: 48px;
 			}
-			& + ul, & + ol, & + h3, & + blockquote, & + img, & + pre, & + .wp-caption{
+			& + ul, & + ol, & + h3, & + blockquote, & + img, & + pre, & + .wp-caption, & + .codecolorer-container{
 				margin-top: 24px;
 			}
 			& > img{
@@ -28,7 +28,7 @@
 			font-weight: 700;
 			line-height: 1.25;
 			letter-spacing: -1.5px;
-			& + p, & + ul, & + .wp-caption{
+			& + p, & + ul, & + ol, & + .wp-caption{
 				margin-top: 16px;
 			}
 			&.categories-list{
@@ -111,7 +111,7 @@
 				left: 0;
 				font-size: 4em;
 			}
-			& + p{
+			& + p, & + h2{
 				margin-top: 24px;
 			}
 		}
@@ -142,6 +142,11 @@
 				margin-top: 24px;
 			}
 		}
+		.codecolorer-container{
+			& + p, & + h2{
+				margin-top: 24px;
+			}
+		}		
 		.wp-caption{
 			max-width: 100%;
 			& + p, & + h2{
