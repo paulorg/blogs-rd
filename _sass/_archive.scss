@@ -186,6 +186,7 @@
 						text-align: center;
 						text-indent: 0;
 						top: 0;
+						vertical-align: middle;
 						width: 32px;
 					}
 					&.facebook{
@@ -216,6 +217,13 @@
 						background: $theme-primary-color;
 						&:after{
 							content: '\f0c1';
+						}
+					}
+					&.snapchat{
+						background: rgb(255,255,0);
+						&:after{
+							content: '\f2ac';
+							text-shadow: -1px 0 rgba(0,0,0,0.25), 0 1px rgba(0,0,0,0.25), 1px 0 rgba(0,0,0,0.25), 0 -1px rgba(0,0,0,0.25);
 						}
 					}
 				}

@@ -71,11 +71,6 @@
 						background: $gray-lighter;
 					}
 				}
-				&:last-child{
-					a{
-						padding-right: 0;
-					}
-				}
 				&.dropdown{
 					& > a:after{
 						content: '\f0d7';
