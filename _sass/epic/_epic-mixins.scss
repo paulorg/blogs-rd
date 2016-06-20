@@ -1,0 +1,28 @@
+@mixin uppercase-font(){
+  font-family: $font-family-sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+@mixin font-icon($icon-name){
+  content: $icon-name;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+@mixin ghost-button($border-color, $color, $border-color-hover, $color-hover){
+  border: 1px solid $border-color;
+  color: $color;
+  margin-top: 24px;
+  &:hover {
+    border-color: $border-color-hover;
+    color: $color-hover;
+  }
+}
