@@ -16,16 +16,24 @@
   // RD ICON MENU
   .navbar-brand{
     height: 48px;
-    text-indent: -5000px;
-    width: 48px;
+    width: 88px;
+    position: relative;
+    i {
+      color: $epic-main-color;
+    }
     &:after {
       background: url("img/rd-signature.svg") no-repeat center center;
       content: "";
       height: 32px;
-      left: 8px;
+      right: 8px;
       position: absolute;
       top: 8px;
       width: 32px;
+    }
+    span {
+      overflow: hidden;
+      width: 0;
+      display: block;
     }
 	}
   .open .navbar-brand {
@@ -52,6 +60,7 @@
   border-radius: 0 0 4px 4px;
   padding: $v-space $col-pad;
   top: 48px;
+  margin-top: 0;
   a, ul, li {
     margin: 0;
     padding: 0;
@@ -150,6 +159,7 @@
 
 // SCROLL TO TOP
 .scroll-top {
+  @include prevent-selection();
   @include  uppercase-font();
   background-color: $gray-lighter;
   border-radius: 4px;

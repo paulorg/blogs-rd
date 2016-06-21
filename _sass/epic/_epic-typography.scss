@@ -1,7 +1,7 @@
 .page-template-page-epic{
   main{
     p.lead{
-      font: 400 1.1em/24px $font-family-sans-serif;
+      font: 300 1.15em/24px $font-family-sans-serif;
     }
     aside p.side-quote {
       color: $epic-main-color;
@@ -21,13 +21,21 @@
     h2, h3, h4, h5, h6 {
       margin: (1.5 * $v-space) 0 $v-space;
     }
+    h5 {
+      font-size: 1.5em;
+      line-height: 40px;
+    }
+    h6 {
+      font-size: 1.2em;
+      line-height: 32px;
+    }
     .panel-heading{
       h3, h4, h5, h6 {
         @include uppercase-font();
         font-size: 16px;
         line-height: 24px;
         margin: 0;
-        padding: 0;
+        padding: 0 24px 0 0;
         word-wrap: break-word;
       }
     }
@@ -57,6 +65,7 @@
 			dt {
         margin-top: 16px;
         font-weight: 400;
+        font-size: 1.15em;
       }
 		}
     a[href^="#"], .epic-nav a {
@@ -114,14 +123,6 @@
       h4{
         font-size: 2em;
         line-height: 48px;
-      }
-      h5 {
-        font-size: 1.5em;
-        line-height: 40px;
-      }
-      h6 {
-        font-size: 1.2em;
-        line-height: 32px;
       }
     }
   }
