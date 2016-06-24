@@ -46,6 +46,36 @@
 	}
 }
 
+.page-template-page-tracks{
+	.post-list{
+		counter-reset: post-list;
+		li{
+			counter-increment: post-list;
+			position: relative;
+			a{
+				padding: 0 0 32px 64px;
+			}
+			&:before{
+				bottom: 0;
+				color: lighten($theme-secondary-color, 45%);
+				content: counter(post-list);
+				display: block;
+				font-size: 2.5em;
+				font-weight: 300;
+				position: absolute;;
+				text-align: center;
+				top: -8px;
+				width: 64px;
+			}
+			& + li{
+				&:before{
+					top: 20px;
+				}
+			}
+		}
+	}
+}
+
 .category-info{
 	margin-bottom: 64px;
 	padding-bottom: 24px;
@@ -263,6 +293,25 @@ aside{
 					& + div{
 						padding-right: 0;
 						width: 66.66666%;
+					}
+				}
+			}
+		}
+	}
+	.page-template-page-tracks{
+		.post-list{
+			li{
+				a{
+					padding: 0 0 32px 128px;
+				}
+				&:before{
+					font-size: 3.5em;
+					top: -16px;
+					width: 128px;
+				}
+				& + li{
+					&:before{
+						top: 8px;
 					}
 				}
 			}
