@@ -1,0 +1,127 @@
+.page-template-page-epic{
+  main{
+    margin: 0;
+    p.lead{
+      font: 300 1.15em/24px $font-family-sans-serif;
+    }
+    aside {
+      margin-top: 0;
+      p.side-quote {
+        color: $epic-main-color;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 48px;
+        float: right;
+        margin: (1.5 * $v-space) (-4.5* $v-space) (2 * $v-space) (2 * $v-space);
+        max-width: 400px;
+        display: none;
+      }
+    }
+    .bg-full h1 {
+      color: $epic-secondary-color;
+      font-size: 3em;
+    }
+    h2, h3, h4, h5, h6 {
+      margin: (1.5 * $v-space) 0 $v-space;
+    }
+    h5 {
+      font-size: 1.5em;
+      line-height: 40px;
+    }
+    h6 {
+      font-size: 1.2em;
+      line-height: 32px;
+    }
+    .panel-heading{
+      h3, h4, h5, h6 {
+        @include uppercase-font();
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        padding: 0 24px 0 0;
+        word-wrap: break-word;
+      }
+    }
+    .carousel {
+      p {
+        margin-top: 0;
+        line-height: 0;
+      }
+    }
+    ul, ol{
+			font-family: $font-family-serif;
+			padding: 0 0 0 20px;
+			li{
+				& + li{
+					margin-top: 16px;
+				}
+				ul, ol{
+					margin: 16px 0 0 -4px;
+				}
+			}
+			& + p, & + h2{
+				margin-top: 24px;
+			}
+		}
+    dl{
+			font-family: $font-family-serif;
+			dt {
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 1.15em;
+      }
+		}
+    a[href^="#"], .epic-nav a {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+@media (min-width: $screen-md){
+  .page-template-page-epic{
+    main{
+      .page-template-page-epic main aside p.side-quote {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-xs){
+  .page-template-page-epic{
+    main{
+      h2, h3, h4, h5, h6 {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      p, li, dt, dd{
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 32px;
+        &.lead{
+          font: 400 1.33em/36px $font-family-sans-serif;
+        }
+      }
+      h1{
+        font-size: 3.5em;
+        line-height: 64px;
+      }
+      h2{
+        font-size: 3em;
+        font-weight: 900;
+        line-height: 64px;
+      }
+      h3{
+        font-size: 2.6em;
+        line-height: 56px;
+      }
+      h4{
+        font-size: 2em;
+        line-height: 48px;
+      }
+    }
+  }
+}

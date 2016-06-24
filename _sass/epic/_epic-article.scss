@@ -1,0 +1,95 @@
+.page-template-page-epic{
+  main{
+    // EPIC ARTICLE
+    .epic-article {
+      padding: (2 * $v-space) 0;
+      position: relative;
+    }
+
+    .cta {
+      background-color: $epic-main-color;
+      color: $white;
+      margin: $v-space (-1 * $col-pad);
+      padding: $v-space (1.5 * $v-space);
+      text-align: center;
+      &:last-child{
+         margin-bottom: (-1 * $col-pad);
+      }
+      .btn {
+        @include ghost-button(rgba(255,255,255,0.5), $white, $white, $white)
+      }
+    }
+
+    .embed-responsive {
+      margin: $v-space 0;
+    }
+    ul.related_posts{
+      list-style: none;
+      padding: 0;
+      br {
+        content: "";
+      }
+      li{
+        display: table;
+        margin-top: 16px;
+        a{
+          color: $gray-dark;
+          display: table-cell;
+          font-size: 0.875em;
+          font-weight: 300;
+          letter-spacing: -0.5px;
+          line-height: 1.5;
+          vertical-align: middle;
+          border-bottom: 0;
+          &.rp_thumbnail{
+            padding: 0;
+            width: 64px;
+          }
+          &.rp_title{
+            padding: 0 0 0 15px;
+            line-height: 24px;
+            max-height: 64px;
+          }
+          &:visited, &:hover, &:focus{
+            color: $gray-dark;
+          }
+          &:hover, &:focus{
+            color: $theme-primary-color !important;
+            & + a{
+              color: $theme-primary-color !important;
+            }
+          }
+          img{
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: $screen-lg){
+  .page-template-page-epic{
+    main{
+      body > footer .signup:before {
+    		background: url('img/signup.gif') no-repeat;
+        background-size: contain;
+    	}
+    }
+  }
+}
+
+@media (min-width: $screen-sm){
+  .page-template-page-epic{
+    main{
+      [class^="col"] {
+        padding: 48px $col-pad;
+      }
+      [class^="col"] [class^="col"] {
+        padding: 0 15px;
+      }
+    }
+  }
+}

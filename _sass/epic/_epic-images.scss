@@ -1,0 +1,57 @@
+.page-template-page-epic{
+  main{
+    .bg-full {
+      width: 100%;
+      position: relative;
+      margin-top: 40px;
+      .bg-img {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 400px;
+      }
+    }
+
+    .epic-header {
+      margin-top: 0px;
+      .container {
+        bottom: 16px;
+        padding-top: $v-space;
+        padding-bottom: $v-space;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 30%;
+          bottom: $v-space;
+          left: 35%;
+          height: 3px;
+          background-color: lighten($epic-secondary-color, 25%);
+        }
+      }
+    }
+
+    [class^="col"] img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $screen-sm){
+  .page-template-page-epic{
+    main{
+      .bg-full {
+        .bg-img.h496 {
+          height: 496px;
+        }
+        &.epic-header, &.epic-header .bg-img, .bg-img.h592 {
+          height: 592px;
+        }
+      }
+    }
+  }
+}
