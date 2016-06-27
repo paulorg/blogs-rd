@@ -4,17 +4,17 @@
       margin: (2 * $v-space) 0;
       .carousel-control.left:before {
         @include font-icon("\f053");
-        position: absolute;
-        top: 50%;
         color: #fff;
         left: 16px;
+        position: absolute;
+        top: 50%;
       }
       .carousel-control.right:before {
         @include font-icon("\f054");
-        position: absolute;
-        top: 50%;
         color: #fff;
+        position: absolute;
         right: 16px;
+        top: 50%;
       }
       br {
         content: "";

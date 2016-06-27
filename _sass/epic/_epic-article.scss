@@ -33,6 +33,7 @@
         display: table;
         margin-top: 16px;
         a{
+          border-bottom: 0;
           color: $gray-dark;
           display: table-cell;
           font-size: 0.875em;
@@ -40,15 +41,14 @@
           letter-spacing: -0.5px;
           line-height: 1.5;
           vertical-align: middle;
-          border-bottom: 0;
           &.rp_thumbnail{
             padding: 0;
             width: 64px;
           }
           &.rp_title{
-            padding: 0 0 0 15px;
             line-height: 24px;
             max-height: 64px;
+            padding: 0 0 0 15px;
           }
           &:visited, &:hover, &:focus{
             color: $gray-dark;

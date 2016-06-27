@@ -8,14 +8,14 @@
       margin-top: 0;
       p.side-quote {
         color: $epic-main-color;
+        display: none;
+        float: right;
         font-style: italic;
         font-weight: 900;
         font-size: 32px;
         line-height: 48px;
-        float: right;
         margin: (1.5 * $v-space) (-4.5* $v-space) (2 * $v-space) (2 * $v-space);
         max-width: 400px;
-        display: none;
       }
     }
     .bg-full h1 {
@@ -45,8 +45,8 @@
     }
     .carousel {
       p {
-        margin-top: 0;
         line-height: 0;
+        margin-top: 0;
       }
     }
     ul, ol{
@@ -67,9 +67,9 @@
     dl{
 			font-family: $font-family-serif;
 			dt {
-        margin-top: 16px;
         font-weight: 400;
         font-size: 1.15em;
+        margin-top: 16px;
       }
 		}
     a[href^="#"], .epic-nav a {
