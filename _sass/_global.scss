@@ -98,6 +98,8 @@ body > footer{
 	.signup{
 		background: $gray-lighter;
 		color: rgba(105,135,165,1);
+		color: rgba(theme-secondary-color);
+
 		padding: 32px 0;
 		position: relative;
 		h2{

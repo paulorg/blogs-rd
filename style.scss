@@ -5,7 +5,7 @@ Theme Name: Blogs Resultados Digitais
 Author: Resultados Digitais
 Author URI: http://resultadosdigitais.com.br
 Description: Tema para blogs da Resultados Digitais.
-Version: 1.2.1
+Version: 1.3.0
 
 */
 
@@ -27,22 +27,14 @@ Version: 1.2.1
 @import "page";
 @import "global";
 
-/* variables */
-@import "epic/epic-variables";
-/* mixins */
-@import "epic/epic-mixins";
-/* type */
-@import "epic/epic-typography";
-/* nav */
-@import "epic/epic-nav";
-/* article */
-@import "epic/epic-article";
-/* images */
-@import "epic/epic-images";
-/* accordion */
-@import "epic/epic-accordion";
-/* accordion */
-@import "epic/epic-carousel";
+// Epic pages styles
 
-/* PRELOADER */
+@import "epic/epic-variables";
+@import "epic/epic-mixins";
+@import "epic/epic-typography";
+@import "epic/epic-nav";
+@import "epic/epic-article";
+@import "epic/epic-images";
+@import "epic/epic-accordion";
+@import "epic/epic-carousel";
 @import "preloader";
