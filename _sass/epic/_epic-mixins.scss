@@ -20,7 +20,9 @@
 @mixin ghost-button($border-color, $color, $border-color-hover, $color-hover){
   border: 1px solid $border-color;
   color: $color;
-  margin-top: 24px;
+  p+& {
+    margin-top: 16px;
+  }
   &:hover {
     border-color: $border-color-hover;
     color: $color-hover;
@@ -31,5 +33,5 @@
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */  
+  user-select: none;          /* Likely future */
 }

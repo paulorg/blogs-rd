@@ -5,7 +5,7 @@
       font: 300 1.15em/24px $font-family-sans-serif;
     }
     aside {
-      margin-top: 0;
+      margin-top: 16px;
       p.side-quote {
         color: $epic-main-color;
         display: none;
@@ -82,7 +82,7 @@
 @media (min-width: $screen-md){
   .page-template-page-epic{
     main{
-      .page-template-page-epic main aside p.side-quote {
+      aside p.side-quote {
         display: block;
       }
     }

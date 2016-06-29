@@ -10,7 +10,15 @@
         background-size: cover;
         display: inline-block;
         height: 400px;
+        overflow: hidden;
         width: 100%;
+        img {
+          height: 100%;
+          left: 50%;
+          max-width: initial;
+          position: relative;
+          transform: translateX(-50%);
+        }
       }
     }
 

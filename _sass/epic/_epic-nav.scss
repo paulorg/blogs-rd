@@ -134,6 +134,7 @@
     .dropdown-toggle {
       @include uppercase-font();
       background-color: $gray-lighter;
+      color: $text-color;
       padding: 15px 16px;
       width: 180px;
       &:after {
