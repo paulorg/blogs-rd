@@ -20,6 +20,9 @@
         @include ghost-button(rgba(255,255,255,0.5), $white, $white, $white)
       }
     }
+    section.cta {
+      margin: $v-space 0;
+    }
 
     .embed-responsive {
       margin: $v-space 0;
