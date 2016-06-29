@@ -92,11 +92,6 @@
 @media (min-width: $screen-xs){
   .page-template-page-epic{
     main{
-      h2, h3, h4, h5, h6 {
-        &:first-child {
-          margin-top: 0;
-        }
-      }
       p, li, dt, dd{
         font-size: 1.2em;
         font-weight: 300;
