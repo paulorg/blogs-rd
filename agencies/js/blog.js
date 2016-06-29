@@ -32,7 +32,7 @@
 
 		});
 
-		$('.navbar-nav li li a[href*=#], .global-offer a').click(function(){
+		$('.navbar-nav li li a[href*=\\#], .global-offer a').click(function(){
 			var topCount = ( $ ( $.attr(this, 'href') ).offset().top );
 			$('html, body').animate({ scrollTop: topCount }, 500);
 			return false;
