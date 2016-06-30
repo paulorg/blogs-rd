@@ -20,6 +20,7 @@
 @mixin ghost-button($border-color, $color, $border-color-hover, $color-hover){
   border: 1px solid $border-color;
   color: $color;
+  white-space: normal;
   p+& {
     margin-top: 16px;
   }
