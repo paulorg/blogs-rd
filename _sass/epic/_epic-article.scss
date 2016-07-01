@@ -22,6 +22,7 @@
     }
     section.cta {
       margin: $v-space 0;
+      padding: $v-space 0 (2*$v-space);
     }
 
     .embed-responsive {
@@ -69,6 +70,127 @@
         }
       }
     }
+  }
+  .social{
+    background: rgba(255,255,255,.9);
+    border-top: 1px solid $gray-lines;
+    bottom: 0;
+    left: 0;
+    margin: 14px 0 0 0;
+    padding: 8px 0 0 8px;
+    position: fixed;
+    right: 0;
+    text-align: left;
+    z-index: 100;
+    .comments{
+      color: $gray-dark;
+      cursor: default;
+      font-weight: 300;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+      li{
+        display: inline-block;
+        a{
+          border-radius: 32px;
+          display: block;
+          height: 32px;
+          margin: 0;
+          position: relative;
+          text-indent: -5000px;
+          width: 32px;
+          &:after{
+            color: $white;
+            display: block;
+            font-family: $font-family-icons;
+            font-size: 15px;
+            height: 32px;
+            left: 0;
+            line-height: 32px;
+            position: absolute;
+            text-align: center;
+            text-indent: 0;
+            top: 0;
+            width: 32px;
+          }
+        }
+        &.facebook{
+          a{
+            background: rgb(66,87,156);
+            &:after{
+              content: '\f09a';
+            }
+          }
+        }
+        &.twitter{
+          a{
+            background: rgb(84,166,229);
+            &:after{
+              content: '\f099';
+            }
+          }
+        }
+        &.google{
+          a{
+            background: rgb(206,83,51);
+            &:after{
+              content: '\f0d5';
+            }
+          }
+        }
+        &.linkedin{
+          a{
+            background: rgb(53,121,186);
+            &:after{
+              content: '\f0e1';
+            }
+          }
+        }
+        &.whatsapp{
+          a{
+            background: rgb(50,183,66);
+            &:after{
+              content: '\f232';
+            }
+          }
+        }
+        & + li{
+          margin: 0 0 0 4px;
+        }
+      }
+    }
+    // SCROLL TO TOP
+    .scroll-top {
+      @include prevent-selection();
+      @include  uppercase-font();
+      background-color: $gray-lighter;
+      border-radius: 4px;
+      bottom: 6px;
+      cursor: pointer;
+      padding: 9px 16px;
+      position: absolute;
+      right: 6px;
+      transition: background .4s;
+      z-index: 99;
+      span {
+        margin-right: 8px;
+      }
+      &:after {
+        @include font-icon("\f062");
+        position: relative;
+        top: -2px;
+      }
+      &:hover, &:focus {
+        background-color: $epic-main-color;
+        color: $white;
+      }
+    }
+    // /end epic scroll to top
+  }
+  &>footer .copyright {
+    padding: 32px 0 80px;
   }
 }
 

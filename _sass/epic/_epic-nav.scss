@@ -150,6 +150,13 @@
       li {
         @include uppercase-font();
       }
+      .active>a {
+        &, &:hover, &:focus {
+          color: $epic-main-color;
+          background-color: transparent;
+          font-weight: 800;
+        }
+      }
     }
   }
 
@@ -166,32 +173,6 @@
       width: 0%;
     }
   }
-
-  // SCROLL TO TOP
-  .scroll-top {
-    @include prevent-selection();
-    @include  uppercase-font();
-    background-color: $gray-lighter;
-    border-radius: 4px;
-    bottom: $v-space;
-    cursor: pointer;
-    padding: 9px 16px;
-    position: fixed;
-    right: $v-space;
-    transition: background .4s;
-    z-index: 99;
-    &:after {
-      @include font-icon("\f106");
-      margin-left: 8px;
-      position: relative;
-      top: -2px;
-    }
-    &:hover, &:focus {
-      background-color: $epic-main-color;
-      color: $white;
-    }
-  }
-  // /end epic scroll to top
 }
 
 

@@ -18,12 +18,13 @@
           max-width: initial;
           position: relative;
           transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
         }
       }
     }
 
     .epic-header {
-      margin-top: 0px;
+      margin: 0 0 40px;
       .container {
         bottom: 0;
         padding-top: $v-space;
