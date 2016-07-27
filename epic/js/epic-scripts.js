@@ -1,3 +1,4 @@
+var $ = jQuery.noConflict();
 $(window).load(function(){
 
   // HIDE NAV BAR WHEN SCROLLING DOWN
