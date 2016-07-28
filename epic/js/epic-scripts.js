@@ -80,7 +80,8 @@ $(window).load(function(){
           "data-parent": idSlug,
           "id": headingId + j,
           "href": "#" + collapseName + j,
-          "aria-controls": collapseName + j
+          "aria-controls": collapseName + j,
+          "data-toggle": "collapse"
         });
         accPanel.eq(j).attr({
           "id": collapseName + j,
