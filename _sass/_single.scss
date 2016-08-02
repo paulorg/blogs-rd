@@ -29,7 +29,7 @@
 				& + h2, & + hr{
 					margin-top: 48px;
 				}
-				& + ul, & + ol, & + h3, & + blockquote, & + img, & + pre, & + .wp-caption, & + .codecolorer-container{
+				& + ul, & + ol, & + h3, & + blockquote, & + img, & + pre, & + .wp-caption, & + .codecolorer-container, & + .embed-responsive{
 					margin-top: 24px;
 				}
 				& > img{
@@ -178,6 +178,11 @@
 				}
 			}
 			.codecolorer-container{
+				& + p, & + h2{
+					margin-top: 24px;
+				}
+			}
+			.embed-responsive{
 				& + p, & + h2{
 					margin-top: 24px;
 				}
