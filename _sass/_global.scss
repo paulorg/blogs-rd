@@ -283,24 +283,6 @@ body > footer{
 		}
 	}
 }
-@media (min-width: $screen-lg){
-	body > footer{
-		.signup{
-			&:before{
-				background: url('img/signup.gif') no-repeat;
-			    background-size: contain;
-			    content: '';
-			    display: block;
-			    height: 140px;
-			    left: 50%;
-			    margin-left: -540px;
-			    position: absolute;
-			    top: 54px;
-			    width: 100px;
-			}
-		}
-	}
-}
 @media (min-width: $screen-md){
 	body > footer{
 		.copyright{
