@@ -140,7 +140,7 @@
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
-		 		max-width: 100%;
+				max-width: 100%;
 			}
 			a{
 				border-bottom: 1px dotted lighten($theme-primary-color, 50%);
@@ -148,10 +148,10 @@
 			}
 			pre{
 				background: $gray-lighter;
-    			border: none;
-    			font-size: 0.8125em;
-    			line-height: 1.5;
-    			padding: 9px 12px 8px;
+				border: none;
+				font-size: 0.8125em;
+				line-height: 1.5;
+				padding: 9px 12px 8px;
 				& + p{
 					margin-top: 24px;
 				}
@@ -173,6 +173,11 @@
 				}
 				p{
 					font-family: $font-family-sans-serif;
+				}
+				header{
+					p{
+						font-size: 1em;
+					}
 				}
 				.form-group{
 					margin-bottom: 18px;
@@ -231,9 +236,47 @@
 						letter-spacing: -0.25px;
 						line-height: 1.5;
 						margin-top: 8px;
-					    padding: 8px 16px;
-					    text-align: center;
+						padding: 8px 16px;
+						text-align: center;
 					}
+				}
+			}
+			.default-banner-background{
+				background: rgba($gray-lines,.4);
+				p{
+					a{
+						padding: 8px 45px;
+						background: $alert;
+						&:hover{
+							background: rgba($alert,.8);;
+						}
+					}
+				}
+				h3{
+					margin-top: 6px;
+				}
+				& > .row{
+					display:flex;
+					align-items:center;
+				}
+			}
+			.alternative-banner-background{
+				background: rgb(220,220,225);
+				p{
+					a{
+						padding: 8px 45px;
+						background: $alert;
+						&:hover{
+							background: rgba($alert,.8);;
+						}
+					}
+				}
+				h3{
+					margin-top: 6px;
+				}
+				& > .row{
+					display:flex;
+					align-items:center;
 				}
 			}
 			.post-categories{
