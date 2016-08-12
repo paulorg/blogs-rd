@@ -24,6 +24,9 @@
     }
     h2, h3, h4, h5, h6 {
       margin: (1.5 * $v-space) 0 $v-space;
+      &:first-child {
+        margin-top: 0px;
+      }
     }
     h5 {
       font-size: 1.5em;
