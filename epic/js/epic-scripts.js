@@ -93,6 +93,52 @@ $(window).load(function(){
     }
   }
 
+  // DYNAMIZE CAROUSEL
+  // Make the Bootstrap carousel dynamic
+  function dynamizeCarousel(){
+    car = $(".carousel");
+    for (i = 0; i < car.length; i++) {
+      // Adding the attributes to make the Carousel work
+      idName = "carousel" + i;
+      idSlug = "#" + idName;
+      car.eq(i).attr({
+          "id": idName,
+          "data-ride": "carousel",
+          "data-interval": false
+      });
+
+      carWrapper = $(idSlug+" .carousel-inner");
+      carItem = carWrapper.find(".item");
+      carWrapper.attr("role", "listbox");
+
+      // Create the Carousel controls
+      car.prepend( "<ol class='carousel-indicators'></ol>" );
+      carBullets = car.find(".carousel-indicators");
+      // Populate the Carousel controls with a bullet for every page
+      for (j = 0; j < carItem.length; j++) {
+        carItemBullet = "<li data-target='" + idSlug + "' data-slide-to='" + j + "'></li>"
+        carBullets.append( carItemBullet );
+      }
+
+      // Activate the first page and bullet
+      carItem.eq(0).addClass("active");
+      carBullets.find("li").eq(0).addClass("active");
+
+      // Associate the arrows controls with the Carousel they are within
+      $(".carousel-control.left").attr({
+        "href":idSlug,
+        "role":"button",
+        "data-slide":"prev"
+      });
+      $(".carousel-control.right").attr({
+        "href":idSlug,
+        "role":"button",
+        "data-slide":"next"
+      });
+    }
+  }
+  dynamizeCarousel();
+
   // Applying scrollTo function to scrollspy links
   spyer = $(".spy-button");
   for (k=0; k < spyer.length; k++){
