@@ -93,6 +93,13 @@ $(window).load(function(){
     }
   }
 
+  // Applying scrollTo function to scrollspy links
+  spyer = $(".spy-button");
+  for (k=0; k < spyer.length; k++){
+    spyerTarget = spyer.eq(k).children().attr("href");
+    scrollTo(spyer.eq(k), $(spyerTarget), 48);
+  }
+
   // Applying scrollTo function to the "back to top" button
   scrollTo($(".scroll-top"), $("body"), 0);
 
