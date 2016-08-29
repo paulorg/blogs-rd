@@ -1,23 +1,77 @@
 .page-template-page-epic{
   main{
+    .carousel-12-errors {
+      background-color: #f7f7f7;
+      background-image: url("https://s3.amazonaws.com/rd-marketing-objects/epic-pages/content-marketing/infographic-bg.png");
+      background-position: top center;
+      padding: 20px 0;
+      margin: 20px 0;
+    }
     .carousel {
       margin: (2 * $v-space) 0;
+      .carousel-inner .item {
+        padding: 0 40px;
+      }
+      .carousel-indicators {
+        bottom: -40px;
+        li {
+          width: 8px;
+          height: 8px;
+          margin: 0 5px;
+          border: none;
+          border-radius: 8px;
+          background-color: $epic-main-color;
+          &.active {
+            margin: 0 5px -1px;
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            border: 2px solid $epic-main-color;
+          }
+        }
+      }
+      .carousel-control.left, .carousel-control.right {
+        background: none;
+        opacity: 1;
+        text-shadow: none;
+      }
       .carousel-control.left:before {
         @include font-icon("\f053");
-        color: #fff;
-        left: 16px;
+        color: $epic-main-color;
+        left: 5px;
         position: absolute;
         top: 50%;
       }
       .carousel-control.right:before {
         @include font-icon("\f054");
-        color: #fff;
+        color: $epic-main-color;
         position: absolute;
-        right: 16px;
+        right: 5px;
         top: 50%;
       }
       br {
         content: "";
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm){
+  .page-template-page-epic{
+    main{
+      .carousel-12-errors {
+        .item, h2 {
+          text-align: center;
+          img {
+            max-width: 180px;
+          }
+        }
+      }
+      .carousel-indicators {
+        left: 50%;
+        width: 100%;
+        margin-left: -50%;
+        padding-left: 0;
       }
     }
   }
