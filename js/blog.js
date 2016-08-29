@@ -19,19 +19,6 @@
 			}
 		});
 
-		//Social Media
-		$('.sharing > span').sharrre({
-			share: {
-				googlePlus: true,
-				facebook: true,
-				linkedin: true,
-				},
-			enableHover: false,
-			urlCurl: ' ',
-			template: '{total}'
-
-		});
-
 		$('.navbar-nav li li a[href*=\\#], .global-offer a').click(function(){
 			var topCount = ( $ ( $.attr(this, 'href') ).offset().top );
 			$('html, body').animate({ scrollTop: topCount }, 500);
