@@ -84,3 +84,16 @@
     }
   }
 }
+
+@media (min-width: 500px) and (max-width: $screen-md) {
+  .page-template-page-epic {
+    main {
+      .affixed img {
+        max-width: 500px !important;
+        position: relative;
+        left: 50%;
+        margin-left: -250px;
+      }
+    }
+  }
+}
