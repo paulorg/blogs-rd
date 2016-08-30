@@ -13,15 +13,18 @@
         margin: 4px 0;
         padding: 16px ($col-pad - 10);
         position: relative;
-      }
-      &.active a {
-        background-color: $epic-main-color;
-        color: $white;
         &:after {
           @include font-icon("\f061");
           position: absolute;
           right: $v-space;
           top: 20px;
+          color: darken($gray-lighter, 5%);
+        }
+      }
+      &.active a {
+        background-color: $epic-main-color;
+        color: $white;
+        &:after {
           color: $white;
         }
       }

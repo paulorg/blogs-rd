@@ -36,6 +36,9 @@
       font-size: 1.2em;
       line-height: 32px;
     }
+    hr {
+      border-top: 3px solid $gray-lighter;
+    }
     .panel-heading, .spy-button{
       &, h3, h4, h5, h6, a {
         @include uppercase-font();

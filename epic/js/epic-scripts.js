@@ -1,5 +1,5 @@
 var $ = jQuery.noConflict();
-$(window).load(function(){
+$(document).ready(function(){
 
   // HIDE NAV BAR WHEN SCROLLING DOWN
   var myElement = document.getElementById("epic-nav");
@@ -160,7 +160,7 @@ $(window).load(function(){
     affixImages();
   })
 
-  $('#preloader').fadeOut('slow',function(){$(this).remove();});
+  $('#preloader').delay(2000).fadeOut('slow',function(){$(this).remove();});
 
   //DISQUS
   var disqus_config = function () {
