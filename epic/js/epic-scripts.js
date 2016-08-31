@@ -1,6 +1,8 @@
 var $ = jQuery.noConflict();
 $(document).ready(function(){
 
+  //$('#preloader').delay(2000).fadeOut('slow',function(){$(this).remove();});
+
   // HIDE NAV BAR WHEN SCROLLING DOWN
   var myElement = document.getElementById("epic-nav");
   var headroom  = new Headroom(myElement);
@@ -159,8 +161,6 @@ $(document).ready(function(){
     scrollTracker();
     affixImages();
   })
-
-  $('#preloader').delay(2000).fadeOut('slow',function(){$(this).remove();});
 
   //DISQUS
   var disqus_config = function () {
