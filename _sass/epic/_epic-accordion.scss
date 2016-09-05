@@ -6,9 +6,9 @@
     }
     .panel-heading {
       background-color: $gray-lighter;
-      border-radius: 4px;
+      border-radius: 4px 4px 0 0;
       cursor: pointer;
-      margin: 4px 0;
+      margin: 4px 0 0;
       padding: 16px ($col-pad - 10);
       position: relative;
       &:after {
@@ -17,8 +17,12 @@
         right: $v-space;
         top: 20px;
       }
-      &.collapsed:after {
-        @include font-icon("\f067");
+      &.collapsed {
+        border-radius: 4px;
+        margin: 4px 0;
+        &:after {
+          @include font-icon("\f067");
+        }
       }
     }
     .panel-collapse {
@@ -27,6 +31,9 @@
       border-radius: 4px;
       overflow: hidden;
       padding: $col-pad ($col-pad - 10);
+      &.in {
+        border-radius: 0 0 4px 4px;
+      }
     }
   }
 }

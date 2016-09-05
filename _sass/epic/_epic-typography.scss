@@ -2,7 +2,7 @@
   main{
     margin: 0;
     p.lead{
-      font: 300 1.15em/24px $font-family-sans-serif;
+      font: 300 1.2em/32px $font-family-sans-serif;
     }
     aside {
       margin-top: 16px;
@@ -24,6 +24,10 @@
     }
     h2, h3, h4, h5, h6 {
       margin: (1.5 * $v-space) 0 $v-space;
+    }
+    h3 {
+      font-size: 1.8em;
+      line-height: 40px;
     }
     h5 {
       font-size: 1.5em;
