@@ -1,0 +1,29 @@
+body>footer {
+  background: $theme-primary-color !important;
+}
+
+.main-nav.navbar-default {
+  background: $theme-tertiary-color !important;
+}
+
+body>footer .copyright {
+  background: darken($theme-primary-color, 5%) !important;
+}
+
+body>header>.container>a {
+  &:after {
+    content: "Blog do software de Marketing e Vendas da RD";
+    color: #fff;
+    font-weight: normal;
+  }
+  h1 {
+    background-image: url(http://site-staging.rdstation.com.br/img/logo-white.svg);
+    background-repeat: no-repeat;
+    width: 180px;
+    overflow: hidden;
+    text-indent: -9999px;
+    padding: 0 !important;
+    margin: 40px 0 0;
+    height: 36px;
+  }
+}

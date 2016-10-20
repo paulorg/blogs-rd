@@ -1,23 +1,24 @@
 // Colors variables
 
-$danger: rgba(215,105,100,1);
+$danger: rgba(244,85,103,1);
 $alert: rgba(245,175,80,1);
-$success: rgba(155,195,180,1);
+$success: rgba(6,201,164,1);
 $gray-lighter: rgba(244,245,248,1);
-$gray-light: rgba(120,120,120,1);
-$gray-dark: rgba(50,50,50,1);
-$gray-lines: rgba(205,205,205,1);
+$gray-light: rgba(153,160,170,1);
+$gray-dark: rgba(64,64,64,1);
+$gray-lines: rgba(232,235,241,1);
 $white: rgba(255,255,255,1);
 
 //Typography variables
 
-$font-family-sans-serif:     "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:          "Merriweather", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:     "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          $font-family-sans-serif !default;
 $font-family-base:           $font-family-sans-serif !default;
-$font-family-icons:			 "FontAwesome";
+$font-family-icons:			     "FontAwesome";
 
 //Theme colors variables
 
 $theme-primary-color: rgba(53,73,102,1);
-$theme-secondary-color: lighten($theme-primary-color, 5%);
-$theme-highlights-color: rgba(65,91,156,1);
+$theme-secondary-color: rgba(65,91,156,1);
+$theme-tertiary-color: rgba(83,85,124,1);
+$theme-highlights-color: rgba(244,85,103,1);
