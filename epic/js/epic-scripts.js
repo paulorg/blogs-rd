@@ -162,7 +162,7 @@ $(document).ready(function(){
     affixImages();
   })
   $(window).load(function(){
-    affixImages();
+    $(document.body).trigger("sticky_kit:recalc");
   })
 
   //DISQUS
