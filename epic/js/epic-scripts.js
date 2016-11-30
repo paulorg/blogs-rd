@@ -161,6 +161,9 @@ $(document).ready(function(){
     scrollTracker();
     affixImages();
   })
+  $(window).load(function(){
+    affixImages();
+  })
 
   //DISQUS
   var disqus_config = function () {
