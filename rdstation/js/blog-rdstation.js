@@ -44,6 +44,16 @@
 		$('#search-modal').on('shown.bs.modal', function () {
 			$('#search-modal input').focus();
 		})
+		// Genereal Nav Behaviour
+		$('.general-nav').affix({
+	    offset: {
+	      top: 104
+	    }
+	  });
+
+	  $('.general-nav .navbar-toggle').click(function(){
+	    $('.general-nav').toggleClass("open");
+	  })
 
 	});
 

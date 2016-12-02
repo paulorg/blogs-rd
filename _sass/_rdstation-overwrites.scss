@@ -2,29 +2,222 @@ body>footer {
   background: $theme-primary-color !important;
 }
 
-.main-nav.navbar-default {
-  background: $theme-tertiary-color !important;
-  margin-top: 28px;
-}
-
 body>footer .copyright {
   background: darken($theme-primary-color, 5%) !important;
 }
 
-body>header>.container>a {
-  &:after {
-    content: "Blog do software de Marketing e Vendas da RD";
-    color: #fff;
-    font-weight: normal;
+//Global nav
+.theme-rdstation {
+  header {
+    background: url(../img/bg-home-video.png);
+    background-size: cover;
+    background-position: center center;
   }
-  h1 {
-    background-image: url(img/rdstation-white.svg);
-    background-repeat: no-repeat;
-    width: 180px;
-    overflow: hidden;
-    text-indent: -9999px;
-    padding: 0 !important;
-    margin: 40px 0 0;
-    height: 36px;
+  .general-nav {
+    border: 0;
+    background: transparent;
+    position: absolute;
+    border-radius: 0;
+    width: 100%;
+    z-index: 101;
+    transition: all .4s;
+    &.affix, &.open {
+      position: fixed;
+      padding-top: 0;
+      background-color: $theme-primary-color;
+    }
+    .navbar-brand {
+      .logo {
+        width: 120px;
+        height: 21px;
+        overflow: hidden;
+        text-indent: -9999px;
+        background-image: url(../img/logo-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+      }
+    }
+    .navbar-toggle {
+      border: 0;
+      padding: 10px 0;
+      &:hover, &:focus {
+        background-color: transparent;
+      }
+      .icon-bar {
+        height: 3px;
+        background-color: $white;
+      }
+    }
+    .navbar-collapse {
+      border: 0;
+      box-shadow: none;
+    }
+    ul.navbar-nav {
+      padding: 0 16px 16px;
+      margin: 0 -15px;
+      li {
+        padding: 0;
+        margin: 0;
+        &:before {
+          content: none;
+        }
+        a, a:focus {
+          padding: 12px 0;
+          box-shadow: none;
+          color: $white;
+          font-weight: normal;
+          text-align: center;
+        }
+        &.active>a, &:hover>a, &:focus>a, &.open>a {
+          &, &:hover, &:focus {
+            background-color: darken($theme-primary-color, 5%);
+            color: $white;
+          }
+        }
+        &.open ul.dropdown-menu {
+          padding: 0;
+          &>li {
+            padding: 0;
+            &>a {
+              padding: 12px 0;
+              color: $white;
+              text-align: center;
+              &.active, &:hover, &:focus {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    ul .btn {
+      border-radius: 2px;
+      font-size: 13px;
+      line-height: 24px;
+      margin: 12px 0 0;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      transition: background 0.4s, border 0.4s, color 0.4s;
+      white-space: normal;
+      font-weight: bold;
+      padding: 6px 12px;
+      background-color: $theme-highlights-color;
+      border: 2px solid $theme-highlights-color;
+      &:hover, &:focus, &:active {
+        background-color: lighten($theme-highlights-color, 10%);
+        border-color: lighten($theme-highlights-color, 10%);
+        color: $white;
+      }
+    }
+    @media screen and (min-width: $screen-md) {
+      padding: 16px 16px 0;
+      .navbar-brand {
+        .logo {
+          margin-top: 6px;
+        }
+      }
+      .navbar-brand {
+        .logo {
+          margin-top: 6px;
+          &.logo-home {
+            width: 160px;
+            height: 28px;
+            float: left;
+          }
+        }
+        .logo-desc {
+          display: block;
+          float: left;
+          font-size: 13px;
+          line-height: 15px;
+          color: $white;
+          margin: 7px 0 0 16px;
+        }
+      }
+      &.affix {
+        .navbar-brand {
+          .logo.logo-home {
+            width: 120px;
+            height: 21px;
+          }
+          .logo-desc {
+            margin: 0 0 0 16px;
+          }
+        }
+      }
+      ul.navbar-nav li {
+        padding: 24px 32px 0 0;
+        margin: 0;
+        a, a:focus {
+          padding: 0 0 4px;
+          box-shadow: none;
+          font-size: 14px;
+          line-height: 16px;
+          color: $white;
+          text-align: left;
+        }
+        &.active>a, &:hover>a, &:focus>a, &.open>a {
+          &, &:hover, &:focus {
+            background-color: transparent;
+            box-shadow: inset 0 -2px 0 $theme-tertiary-color;
+            color: $white;
+          }
+        }
+        &.open ul.dropdown-menu {
+          background: $white;
+          border-radius: 0;
+          border: 1px solid $gray-lines;
+          box-shadow: 0px 0px 8px rgba($gray-light, 0.2);
+          left: calc(50% - 100px);
+          padding: 0;
+          li {
+            padding: 0;
+            a {
+              padding: 12px 0;
+              color: $gray-dark;
+              text-align: center;
+              &.active, &:hover, &:focus {
+                box-shadow: none;
+                color: $gray-dark;
+                background-color: $gray-lines;
+              }
+            }
+          }
+        }
+      }
+      ul .btn {
+        float: right;
+      }
+    }
+  }
+}
+
+//Main nav
+.theme-rdstation {
+  .main-nav{
+  	&.navbar-default{
+  		background: $theme-primary-color;
+  		.navbar-nav > li{
+				&.open, &.open:hover, &.open:focus{
+					& > a{
+						background: darken($theme-primary-color, 5%);
+					}
+				}
+				&.dropdown .dropdown-menu{
+						background: darken($theme-primary-color, 5%);
+				}
+  		}
+  	}
+  	.navbar-toggle{
+  		margin-left: 0px;
+  		&:before{
+  			content: none;
+  		}
+  		&:after{
+  			content: 'Categorias';
+  			margin: -8px 0 0 0;
+  		}
+  	}
   }
 }
