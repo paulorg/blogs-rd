@@ -1,10 +1,8 @@
 //General nav
-.theme-rdstation {
-  &>header {
-    min-height: 144px;
-    @media screen and (max-width: $screen-md) {
-      min-height: auto;
-    }
+.header-rdstation {
+  min-height: 144px;
+  @media screen and (max-width: $screen-md) {
+    min-height: auto;
   }
   .general-nav {
     border: 0;
@@ -13,7 +11,7 @@
     z-index: 101;
     transition: all .4s;
     min-height: 96px;
-    background: url(../img/bg-home-video.png);
+    background: url(img/bg-home-video.png);
     background-size: cover;
     background-position: center center;
     @media screen and (max-width: $screen-md) {
@@ -33,7 +31,7 @@
         height: 21px;
         overflow: hidden;
         text-indent: -9999px;
-        background-image: url(../img/logo-white.svg);
+        background-image: url(img/logo-white.svg);
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
@@ -200,7 +198,7 @@
 }
 
 //Blog nav
-.theme-rdstation {
+.header-rdstation {
   .main-nav{
   	&.navbar-default{
   		background: $theme-primary-color;
@@ -232,11 +230,9 @@
 }
 
 //Footer
-.theme-rdstation {
-  & > footer {
-    background: $theme-primary-color !important;
-    .copyright {
-      background: darken($theme-primary-color, 5%) !important;
-    }
+body > footer {
+  background: $theme-primary-color !important;
+  .copyright {
+    background: darken($theme-primary-color, 5%) !important;
   }
 }
