@@ -303,6 +303,31 @@
 					}
 				}
 			}
+			.table {
+			  margin: 40px 0;
+			  overflow-x: auto;
+			  width: 100%;
+				border: 1px solid $gray-lighter;
+			}
+			table {
+			  border-collapse: collapse;
+			  border-spacing: 0;
+			  width: 100%;
+			  tr:not(:last-child) {
+			    border-bottom: 1px solid $gray-lighter;
+			  }
+			  th, tr:first-child>td, th p, tr:first-child>td p {
+			    font-weight:bold;
+			    vertical-align: middle;
+			  }
+			  th, td {
+			    border: none;
+			    min-width: 120px;
+			    padding: 12px;
+			    text-align: left;
+			    vertical-align: top;
+			  }
+			}
 		}
 		footer{
 			margin-top: 48px;
@@ -485,6 +510,11 @@
 			}
 		}
 	}
+}
+@media screen and (min-width: $screen-sm) {
+  .table {
+      border: 0;
+  }
 }
 @media (min-width: $screen-md){
 	.single > main{
