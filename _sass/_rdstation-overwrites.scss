@@ -222,6 +222,9 @@
   			content: 'Categorias';
   			margin: -8px 0 0 -15px !important;
   		}
+      @media screen and (max-width: 768px) {
+        margin-left: 15px;
+      }
   	}
     @media screen and (max-width: 1024px) {
       padding-top: 52px;
