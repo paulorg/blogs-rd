@@ -1,0 +1,28 @@
+---
+---
+/*!
+Theme Name: Blogs Resultados Digitais - Ship It
+Author: Resultados Digitais
+Author URI: http://resultadosdigitais.com.br/shipit/
+Description: Tema para o blog Ship It.
+Template: resultados_digitais
+Version: 1.0.0
+*/
+
+// Base Styles
+
+@charset "utf-8";
+@import "fonts";
+@import "variables-shipit"; //Ship It theme special variables
+@import "mixins";
+@import "bootstrap";
+@import "overrides";
+@import "global_nav";
+@import "main_nav";
+@import "search";
+@import "single";
+@import "archive";
+@import "plugins";
+@import "404";
+@import "page";
+@import "global";
