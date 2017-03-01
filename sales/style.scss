@@ -1,0 +1,28 @@
+---
+---
+/*!
+Theme Name: Blogs Resultados Digitais - Rotina de Vendas
+Author: Resultados Digitais
+Author URI: http://www.rotinadevendas.com.br/
+Description: Tema para o blog Rotina de Vendas.
+Template: resultados_digitais
+Version: 1.0.0
+*/
+
+// Base Styles
+
+@charset "utf-8";
+@import "fonts";
+@import "variables-sales"; //Ship It theme special variables
+@import "mixins";
+@import "bootstrap";
+@import "overrides";
+@import "global_nav";
+@import "main_nav";
+@import "search";
+@import "single";
+@import "archive";
+@import "plugins";
+@import "404";
+@import "page";
+@import "global";
