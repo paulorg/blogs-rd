@@ -11,10 +11,12 @@
 					color: $white;
 					font-weight: 300;
 				}
-				&.open, &.open:hover, &.open:focus{
-					& > a{
-						background: darken($theme-secondary-color, 5%);
-						color: $white;
+				&.open, &.active {
+					&, &:hover, &:focus{
+						& > a{
+							background: darken($theme-secondary-color, 5%);
+							color: $white;
+						}
 					}
 				}
 				&.dropdown{
