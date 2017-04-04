@@ -90,7 +90,7 @@
 		}
 	}
 	&:after{
-		content: '×';
+		content: '\00d7';
 		color: $gray-light;
 		cursor: pointer;
 		font-size: 3em;

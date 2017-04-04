@@ -25,6 +25,9 @@
 		form{
 			margin: 8px 0 56px;
 		}
+		.search-box .input-group {
+			display: block;
+		}
 		ul{
 			list-style: none;
 			margin-top: 16px;
@@ -39,7 +42,7 @@
 					h3{
 						color: $gray-dark;
 						font-size: 1em;
-						font-weight: 300;	
+						font-weight: 300;
 						letter-spacing: -0.5px;
 						line-height: 1.5;
 						margin: 16px 0 0;
