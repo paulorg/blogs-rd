@@ -17,11 +17,14 @@
 		});
 
 		// Estimated reading time
-		var text = $('main.post').text();
-		var charsLength = text.length;
-        var wordsCount = text.split(' ').length;
-        var readingSpeed = Math.round(wordsCount / 200);
-        $('.reading-time .minutes').text(readingSpeed);
+		var text = $('main.post').html();
+		if (text.indexOf('<form') > -1) {
+			text = text.slice(0, text.indexOf('<form')) + text.slice(text.indexOf('</form>'));
+		}
+		text = text.replace(/(<([^>]+)>)/ig,'');
+		var wordsCount = text.split(' ').length;
+		var readingSpeed = Math.round(wordsCount / 200);
+		$('.reading-time .minutes').text(readingSpeed);
 
 		//DISQUS
 		var disqus_config = function () {
