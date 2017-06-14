@@ -22,10 +22,8 @@
 		//Social share count
         $(".sharing").each(function (index, e) {
             var shareUrl = $(this).attr('data-url');
-            $.getJSON('https://count.donreach.com/?url=' + encodeURIComponent(shareUrl) + "&callback=?", function (data) {
-            	shares = data.shares;
-            	shares.total = data.total;
-            	count = shares["total"];
+            $.getJSON('https://website-grader.herokuapp.com/social/' + encodeURIComponent(shareUrl), function (result) {
+            	count = result.data.shares.total;
             	if (count > 1000) {
                 	count = (count / 1000).toFixed(1);
                 	if (count > 1000) count = (count / 1000).toFixed(1) + "M";
