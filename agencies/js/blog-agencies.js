@@ -20,20 +20,21 @@
 		});
 
 		//Social share count
-        $(".sharing").each(function (index, e) {
-            var shareUrl = $(this).attr('data-url');
-            $.getJSON('https://count.donreach.com/?url=' + encodeURIComponent(shareUrl) + "&callback=?", function (data) {
-            	shares = data.shares;
-            	shares.total = data.total;
-            	count = shares["total"];
-            	if (count > 1000) {
-                	count = (count / 1000).toFixed(1);
-                	if (count > 1000) count = (count / 1000).toFixed(1) + "M";
-                	else count = count + "k";
-            	}
-            	$(e).html(count+" compartilhamentos");
-        	});
-    	});
+		$(".sharing").each(function (index, e) {
+      var shareUrl = $(this).attr('data-url');
+			$.when(
+		  	$.getJSON('https://count.donreach.com/?url=' + encodeURIComponent(shareUrl.replace('https://', 'http://')) + '&callback=?'),
+		    $.getJSON('https://count.donreach.com/?url=' + encodeURIComponent(shareUrl) + '&callback=?')
+		  ).then(function(http, https) {
+		  	var count = http[0].total + https[0].total - http[0].shares.linkedin;
+				if (count > 1000) {
+        	count = (count / 1000).toFixed(1);
+          if (count > 1000) count = (count / 1000).toFixed(1) + "M";
+          else count = count + "k";
+      	}
+				$(e).html(count + " compartilhamentos");
+		  });
+		});
 
 		$('.navbar-nav li li a[href*=\\#], .global-offer a').click(function(){
 			var topCount = ( $ ( $.attr(this, 'href') ).offset().top );
