@@ -1,5 +1,3 @@
----
----
 /*!
 Theme Name: Blogs Resultados Digitais
 Author: Resultados Digitais
@@ -11,31 +9,30 @@ Version: 1.8.1
 
 // Base Styles
 
-@charset "utf-8";
-@import "fonts";
-@import "variables";
-@import "mixins";
-@import "bootstrap";
-@import "overrides";
-@import "global_nav";
+@import "_sass/fonts";
+@import "_sass/variables";
+@import "_sass/mixins";
+@import "_sass/bootstrap";
+@import "_sass/overrides";
+/*@import "global_nav";
 @import "main_nav";
 @import "search";
 @import "single";
 @import "archive";
 @import "plugins";
-@import "404";
-@import "page";
-@import "global";
+@import "404";*/
+//@import "_sass/page";
+@import "_sass/global";
 
 // Epic pages styles
 
-@import "epic/epic-variables";
-@import "epic/epic-mixins";
-@import "epic/epic-typography";
-@import "epic/epic-nav";
-@import "epic/epic-article";
-@import "epic/epic-images";
-@import "epic/epic-accordion";
-@import "epic/epic-carousel";
-@import "epic/epic-scrollspy";
-@import "preloader";
+@import "_sass/epic/epic-variables";
+@import "_sass/epic/epic-mixins";
+@import "_sass/epic/epic-typography";
+@import "_sass/epic/epic-nav";
+@import "_sass/epic/epic-article";
+@import "_sass/epic/epic-images";
+@import "_sass/epic/epic-accordion";
+@import "_sass/epic/epic-carousel";
+@import "_sass/epic/epic-scrollspy";
+@import "_sass/preloader";
