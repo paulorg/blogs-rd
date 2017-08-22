@@ -8,14 +8,17 @@
 
 		$('#rsssignsidebarform').submit(function() {
 			if ($('#rsssignsidebarform input:checkbox').is(':checked')) {
-
-				var data_array = [
-					{ name: 'email', value: inputEmail.val() },
-					{ name: 'identificador', value: 'rdstation_blog_subscription' },
-					{ name: 'token_rdstation', value: TOKEN }
-				];
-				RdIntegration.post(data_array);
-
+				var data_obj = {
+		      'token_rdstation': TOKEN,
+		      'identificador': 'rdstation_blog_subscription',
+		      'email': inputEmail.val()
+		    };
+				$.ajax({
+		      type: 'POST',
+		      url: 'https://www.rdstation.com.br/api/1.3/conversions',
+		      data: data_obj,
+		      crossDomain: true
+		    });
 			}
 		});
 
