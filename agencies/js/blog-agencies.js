@@ -3,11 +3,11 @@
 	$(document).ready(function (){
 
 		var TOKEN = '4ac98d510af23fd1b39770575544b8e0';
-		var form = $('#rsssignsidebarform');
+		var form = $('#feedburner-form');
 		var inputEmail = form.find('input[name="email"]');
 
-		$('#rsssignsidebarform').submit(function() {
-			if ($('#rsssignsidebarform input:checkbox').is(':checked')) {
+		$('#feedburner-form').submit(function() {
+			if ($('#feedburner-form input:checkbox').is(':checked')) {
 				var data_obj = {
 		      'token_rdstation': TOKEN,
 		      'identificador': 'agencies_blog_subscription',
