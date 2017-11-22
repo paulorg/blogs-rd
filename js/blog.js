@@ -11,7 +11,8 @@
 				var data_obj = {
 		      'token_rdstation': TOKEN,
 		      'identificador': 'blog_subscription',
-		      'email': inputEmail.val()
+		      'email': inputEmail.val(),
+					'c_utmz': $('#c_utmz').val()
 		    };
 				$.ajax({
 		      type: 'POST',
