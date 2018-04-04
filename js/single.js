@@ -2,6 +2,9 @@
 
 	$(document).ready(function (){
 
+		dataLayer.push({ 'Author': post.author, 'Subject': post.subject });
+		console.log(post.author);
+
 		var topDistance = $('.single article header').offset().top + $('.single article header').height() + 48;
 		var bottomDistance = $('article footer').height() + $('body > footer').height() + $('aside').height() + 120;
 
