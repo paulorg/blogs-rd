@@ -14,7 +14,6 @@
 		      'email': inputEmail.val(),
 					'c_utmz': $('#c_utmz').val()
 		    };
-				dataLayer.push({'event': 'conversao'});
 				$.ajax({
 		      type: 'POST',
 		      url: 'https://www.rdstation.com.br/api/1.3/conversions',
@@ -22,10 +21,6 @@
 		      crossDomain: true
 		    });
 			}
-		});
-
-		$('#conversion-form').on('submit', function() {
-			dataLayer.push({'event': 'conversao'});
 		});
 
 		//Social share count
